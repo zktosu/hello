@@ -5,21 +5,22 @@ import(
 )
 const englishPrefix = "Hello "
 const trPrefix = "Merhaba "
-
+const frPrefix = "Bonjour "
 func Hello(name,lang string) string{
+	prefix := englishPrefix
 	if name == ""{
 		name = "World"
 	}
 	if lang == "turkish"{
-		return trPrefix + name +"!"
+		prefix = trPrefix
 	}
-	if lang == "english"{
-		return englishPrefix + name + "!"
+	if lang == "french" {
+		prefix = frPrefix
 	}
-	return ""
+	return prefix + name + "!"
 }
 
 
 func main(){
-	fmt.Println(Hello("world","turkish"))
+	fmt.Println(Hello("Sebastian","french"))
 }
