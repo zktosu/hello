@@ -6,14 +6,20 @@ import(
 const englishPrefix = "Hello "
 const trPrefix = "Merhaba "
 
-func Hello(name string) string{
+func Hello(name,lang string) string{
 	if name == ""{
 		name = "World"
 	}
-	return englishPrefix + name + "!"
+	if lang == "turkish"{
+		return trPrefix + name +"!"
+	}
+	if lang == "english"{
+		return englishPrefix + name + "!"
+	}
+	return ""
 }
 
 
 func main(){
-	fmt.Println(Hello("world"))
+	fmt.Println(Hello("world","turkish"))
 }
