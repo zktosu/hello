@@ -6,18 +6,24 @@ import(
 const englishPrefix = "Hello "
 const trPrefix = "Merhaba "
 const frPrefix = "Bonjour "
+
+func getPrefix(lang string)(prefix string){
+	switch lang{
+	case "turkish":
+		prefix = trPrefix
+	case "french":
+		prefix = frPrefix
+	default:
+		prefix = englishPrefix
+	}
+	return
+}
+
 func Hello(name,lang string) string{
-	prefix := englishPrefix
 	if name == ""{
 		name = "World"
 	}
-	if lang == "turkish"{
-		prefix = trPrefix
-	}
-	if lang == "french" {
-		prefix = frPrefix
-	}
-	return prefix + name + "!"
+	return getPrefix(lang) + name + "!"
 }
 
 
