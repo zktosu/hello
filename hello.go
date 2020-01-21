@@ -3,8 +3,14 @@ package main
 import(
 	"fmt"
 )
+const englishPrefix = "Hello "
+const trPrefix = "Merhaba "
+
 func Hello(name string) string{
-	return "Hello " + name + "!"
+	if name == ""{
+		name = "World"
+	}
+	return englishPrefix + name + "!"
 }
 
 
