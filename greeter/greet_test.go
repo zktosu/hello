@@ -15,8 +15,8 @@ func TestGreet(t *testing.T){
 		assertTest(t, got, want)
 	})
 	t.Run("parametreli hali", func(t *testing.T){
-		got := GreetName("Durmuş")
-		want:="Hello, Durmuş!"
+		got := GreetName("John")
+		want:="Hello, John!"
 		assertTest(t, got, want)
 	})
 }
